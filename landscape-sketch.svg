@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 160" width="1400" height="160">
+  <defs>
+    <filter id="w1" x="-4%" y="-10%" width="108%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="3" seed="5"/>
+      <feDisplacementMap in="SourceGraphic" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="w2" x="-4%" y="-10%" width="108%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" seed="11"/>
+      <feDisplacementMap in="SourceGraphic" scale="1.3" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="w3" x="-4%" y="-10%" width="108%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="3" seed="2"/>
+      <feDisplacementMap in="SourceGraphic" scale="1.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+
+  <!-- GROUND -->
+  <line x1="0" y1="126" x2="1400" y2="126" stroke="#1a1714" stroke-width="1.6" stroke-linecap="round"/>
+
+  <!-- city silhouette left -->
+  <g opacity="0.12" stroke="#1a1714" fill="none" stroke-width="0.9">
+    <rect x="18" y="74" width="24" height="52"/>
+    <rect x="24" y="66" width="12" height="10"/>
+    <rect x="48" y="84" width="18" height="42"/>
+    <rect x="72" y="60" width="30" height="66"/>
+    <rect x="78" y="52" width="14" height="10"/>
+    <rect x="108" y="78" width="22" height="48"/>
+  </g>
+
+  <!-- city silhouette right -->
+  <g opacity="0.12" stroke="#1a1714" fill="none" stroke-width="0.9">
+    <rect x="1256" y="80" width="26" height="46"/>
+    <rect x="1262" y="72" width="14" height="10"/>
+    <rect x="1288" y="70" width="30" height="56"/>
+    <rect x="1294" y="62" width="16" height="10"/>
+    <rect x="1324" y="86" width="20" height="40"/>
+    <rect x="1350" y="78" width="28" height="48"/>
+    <rect x="1356" y="70" width="14" height="10"/>
+  </g>
+
+  <!-- pine trees left -->
+  <polygon points="180,126 196,78 212,126" stroke="#1a1714" fill="none" stroke-width="1.2" stroke-linejoin="round" opacity="0.6" filter="url(#w1)"/>
+  <polygon points="206,126 219,88 232,126" stroke="#1a1714" fill="none" stroke-width="1.2" stroke-linejoin="round" opacity="0.55" filter="url(#w2)"/>
+  <polygon points="228,126 239,96 250,126" stroke="#1a1714" fill="none" stroke-width="1.1" stroke-linejoin="round" opacity="0.45" filter="url(#w3)"/>
+
+  <!-- bench 1 -->
+  <path d="M306,112 L366,112 M314,112 L314,126 M358,112 L358,126 M306,102 L366,102 M313,102 L313,112 M359,102 L359,112"
+    stroke="#1a1714" fill="none" stroke-width="1.5" stroke-linecap="round" filter="url(#w2)"/>
+
+  <!-- round tree 1 -->
+  <circle cx="444" cy="74" r="44" stroke="#1a1714" fill="none" stroke-width="1.5" filter="url(#w1)"/>
+  <line x1="444" y1="117" x2="444" y2="126" stroke="#1a1714" stroke-width="2.2" stroke-linecap="round"/>
+
+  <!-- lamp post -->
+  <path d="M548,126 L548,46 Q566,36 578,48" stroke="#1a1714" fill="none" stroke-width="1.5" stroke-linecap="round" filter="url(#w1)"/>
+  <circle cx="579" cy="50" r="4.5" stroke="#1a1714" fill="none" stroke-width="1.3" filter="url(#w2)"/>
+
+  <!-- cypress tree -->
+  <ellipse cx="648" cy="80" rx="19" ry="46" stroke="#1a1714" fill="none" stroke-width="1.4" filter="url(#w1)"/>
+
+  <!-- fountain -->
+  <g filter="url(#w2)">
+    <ellipse cx="748" cy="122" rx="44" ry="8" stroke="#1a1714" fill="none" stroke-width="1.3"/>
+    <ellipse cx="748" cy="120" rx="28" ry="5" stroke="#1a1714" fill="none" stroke-width="1.0"/>
+    <line x1="748" y1="72" x2="748" y2="114" stroke="#1a1714" stroke-width="1.4" stroke-linecap="round"/>
+  </g>
+  <path d="M748,72 Q736,54 732,42" stroke="#1a1714" fill="none" stroke-width="1.0" opacity="0.65" filter="url(#w1)"/>
+  <path d="M748,72 Q760,54 764,42" stroke="#1a1714" fill="none" stroke-width="1.0" opacity="0.65" filter="url(#w3)"/>
+  <path d="M748,72 Q740,58 736,48" stroke="#1a1714" fill="none" stroke-width="0.8" opacity="0.4" filter="url(#w2)"/>
+  <path d="M748,72 Q756,58 760,48" stroke="#1a1714" fill="none" stroke-width="0.8" opacity="0.4" filter="url(#w1)"/>
+
+  <!-- bench 2 -->
+  <path d="M828,112 L888,112 M836,112 L836,126 M880,112 L880,126 M828,102 L888,102 M835,102 L835,112 M881,102 L881,112"
+    stroke="#1a1714" fill="none" stroke-width="1.5" stroke-linecap="round" filter="url(#w3)"/>
+
+  <!-- round tree 2 with inner ring -->
+  <circle cx="964" cy="84" r="36" stroke="#1a1714" fill="none" stroke-width="1.4" filter="url(#w3)"/>
+  <circle cx="964" cy="84" r="22" stroke="#1a1714" fill="none" stroke-width="0.7" opacity="0.35" filter="url(#w1)"/>
+  <line x1="964" y1="119" x2="964" y2="126" stroke="#1a1714" stroke-width="2.0" stroke-linecap="round"/>
+
+  <!-- low hedge shrubs -->
+  <path d="M1040,126 Q1050,108 1060,126" stroke="#1a1714" fill="none" stroke-width="1.2" filter="url(#w1)"/>
+  <path d="M1056,126 Q1068,104 1080,126" stroke="#1a1714" fill="none" stroke-width="1.2" filter="url(#w2)"/>
+  <path d="M1076,126 Q1086,110 1096,126" stroke="#1a1714" fill="none" stroke-width="1.2" filter="url(#w3)"/>
+  <path d="M1092,126 Q1100,114 1108,126" stroke="#1a1714" fill="none" stroke-width="1.1" filter="url(#w1)"/>
+
+  <!-- pine trees right -->
+  <polygon points="1148,126 1164,80 1180,126" stroke="#1a1714" fill="none" stroke-width="1.2" stroke-linejoin="round" opacity="0.6" filter="url(#w2)"/>
+  <polygon points="1174,126 1187,90 1200,126" stroke="#1a1714" fill="none" stroke-width="1.2" stroke-linejoin="round" opacity="0.55" filter="url(#w1)"/>
+  <polygon points="1196,126 1207,100 1218,126" stroke="#1a1714" fill="none" stroke-width="1.1" stroke-linejoin="round" opacity="0.45" filter="url(#w3)"/>
+</svg>
