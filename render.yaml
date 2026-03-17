@@ -1,0 +1,7 @@
+services:
+  - type: static_site
+    name: yoka-projects-site
+    env: static
+    buildCommand: ""
+    staticPublishPath: .
+    pullRequestPreviewsEnabled: true
