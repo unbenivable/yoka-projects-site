@@ -197,11 +197,12 @@
     }
     .hero-sub {
       font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.8rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
+      font-size: 0.82rem;
+      letter-spacing: 0.18em;
+      text-transform: none;
       color: var(--accent);
-      margin-top: 0.5rem;
+      margin-top: 0.75rem;
+      max-width: 820px;
     }
     .hero-bottom {
       position: relative;
@@ -275,7 +276,25 @@
       opacity: 0.6;
     }
     .about-body p { margin: 0 0 1rem; }
-    .about-body p:last-child { margin-bottom: 0; }
+    .about-body p:last-of-type { margin-bottom: 0; }
+
+    .about-section-title {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin: 2.25rem 0 0.75rem;
+      color: var(--ink);
+    }
+
+    .about-approach-diagram {
+      font-family: 'IBM Plex Mono', monospace;
+      letter-spacing: 0.05em;
+      font-size: 0.95rem;
+      line-height: 1.65;
+      margin: 0 0 2rem;
+      color: var(--ink);
+    }
     .about-aside {
       font-family: 'IBM Plex Mono', monospace;
       font-size: 0.7rem;
@@ -503,12 +522,12 @@
     </a>
     <div class="hero-tagline-wrap">
       <h1 class="hero-tagline">
-        <span class="sketch-ul" data-en="tagline">Designing the City.</span>
+        <span class="sketch-ul" data-en="tagline">YOKA</span>
       </h1>
-      <p class="hero-sub" data-en="heroSub">Public Spaces · Project Management</p>
+      <p class="hero-sub" data-en="heroSub">Development and operation of places that shape the environments where people live</p>
     </div>
     <div class="hero-bottom">
-      <p class="hero-desc" data-en="heroDesc">Public space projects that shape how people experience the city.</p>
+      <p class="hero-desc" data-en="heroDesc">It all starts with a place</p>
       <div class="scroll-cue">
         <span data-en="scroll">Scroll</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
@@ -520,10 +539,17 @@
     <div class="about-inner">
       <div class="about-grid">
         <div>
-          <h2 class="about-heading"><span class="sketch-ul" data-en="aboutHeading">We shape the spaces people live in.</span></h2>
+          <h2 class="about-heading"><span class="sketch-ul" data-en="aboutHeading">The world is changing fast. But people are not.</span></h2>
           <div class="about-body">
-            <p data-en="aboutBody1">Public space is not background — it is the city itself. YOKA Projects manages the full lifecycle of urban public space initiatives: from the first stakeholder meeting to the last stone laid. Squares, parks, promenades, streetscapes, and waterfront regenerations that become part of how a city remembers itself.</p>
-            <p data-en="aboutBody2">We work at the intersection of municipal vision, design teams, contractors, and community. Our role is to hold the entire project together — keeping timelines honest, budgets real, and ambitions intact. We don't just manage projects. We protect them.</p>
+            <p data-en="aboutBody1">People will always want to leave the house, to see, to meet, to experience, to be part of something. That was true before us, and it will remain true after us.</p>
+            <p data-en="aboutBody2">As the world becomes more digital, the physical place becomes more meaningful. That is why we will always need places for people. We build them.</p>
+
+            <h3 class="about-section-title" data-en="approachHeading">Approach</h3>
+            <p class="about-approach-diagram" data-en="approachFormula">Programming creates value → Value creates movement → Movement creates revenue</p>
+
+            <h3 class="about-section-title" data-en="whoHeading">Who we are and what we do</h3>
+            <p class="about-who" data-en="whoBody1">We are a team from different disciplines — entrepreneurship, management, architecture, design, content, finance, and technology. Together we complete the puzzle that brings a vision down to the ground and turns an idea into reality.</p>
+            <p class="about-who" data-en="whoBody2">Our work focuses on developing places for people to stay and to act. Places where people come to be, work, create, train, learn, meet, and spend time. We work across spaces for work and creation, sports activities, culture, community, commerce, and services — and the connections between them. We build the platform — the place, the structure, and the system that enables activity to happen. We shape the content and the program, and the people who come ultimately shape the place and bring it to life.</p>
           </div>
         </div>
         <aside class="about-aside">
@@ -672,13 +698,18 @@
 
       // Copy: English (only EN shown when EN selected)
       const copyEn = {
-        tagline: 'Designing the City.',
-        heroSub: 'Public Spaces · Project Management',
-        heroDesc: 'Public space projects that shape how people experience the city.',
+        tagline: 'YOKA',
+        heroSub: 'Development and operation of places that shape the environments where people live',
+        heroDesc: 'It all starts with a place',
         scroll: 'Scroll',
-        aboutHeading: 'We shape the spaces people live in.',
-        aboutBody1: 'Public space is not background — it is the city itself. YOKA Projects manages the full lifecycle of urban public space initiatives: from the first stakeholder meeting to the last stone laid. Squares, parks, promenades, streetscapes, and waterfront regenerations that become part of how a city remembers itself.',
-        aboutBody2: 'We work at the intersection of municipal vision, design teams, contractors, and community. Our role is to hold the entire project together — keeping timelines honest, budgets real, and ambitions intact. We don\'t just manage projects. We protect them.',
+        aboutHeading: 'The world is changing fast. But people are not.',
+        aboutBody1: 'People will always want to leave the house, to see, to meet, to experience, to be part of something. That was true before us, and it will remain true after us.',
+        aboutBody2: 'As the world becomes more digital, the physical place becomes more meaningful. That is why we will always need places for people. We build them.',
+        approachHeading: 'Approach',
+        approachFormula: 'Programming creates value → Value creates movement → Movement creates revenue',
+        whoHeading: 'Who we are and what we do',
+        whoBody1: 'We are a team from different disciplines — entrepreneurship, management, architecture, design, content, finance, and technology. Together we complete the puzzle that brings a vision down to the ground and turns an idea into reality.',
+        whoBody2: 'Our work focuses on developing places for people to stay and to act. Places where people come to be, work, create, train, learn, meet, and spend time. We work across spaces for work and creation, sports activities, culture, community, commerce, and services — and the connections between them. We build the platform — the place, the structure, and the system that enables activity to happen. We shape the content and the program, and the people who come ultimately shape the place and bring it to life.',
         specialty: 'Specialty',
         publicSpaces: 'Public Realm Management',
         scale: 'Scale',
@@ -687,14 +718,14 @@
         israel: 'Israel',
         est: 'Est.',
         estYear: '2015',
-        pmTitle: '01 — Project Management',
-        pmDesc: 'End-to-end oversight from feasibility to handover. Budget control, scheduling, contractor coordination, and risk management — so nothing falls through the cracks.',
-        srTitle: '02 — Stakeholder Relations',
-        srDesc: 'Navigating the complex web of municipalities, government bodies, local communities, architects, and developers. We keep everyone aligned — and moving forward.',
-        urTitle: '03 — Urban Renewal',
-        urDesc: 'Breathing new life into neglected urban fabric. We manage the transformation of underused and forgotten spaces into places the city is proud of.',
-        spTitle: '04 — Strategic Planning',
-        spDesc: 'Helping municipalities and developers think long-term about their public realm. Master plans, feasibility studies, and development roadmaps that hold up over time.',
+        pmTitle: '01 — Concept and Programming',
+        pmDesc: 'A deep understanding of the place — its history, structures, surroundings, and needs — leading to the definition of its central idea. That idea is translated into a program of uses, spatial distribution, and key anchors that generate movement, activity, and economic value. The process combines spatial planning, design thinking, and business strategy until the core concept and the uses that define the place become clear.',
+        srTitle: '02 — Development and Realization',
+        srDesc: 'Translating the concept and program into detailed planning and the physical realization of the place. Coordinating design and construction processes, building budgets and financial frameworks, shaping content and activities, and working with suppliers and professional teams. Throughout the process the guiding concept of the project is maintained, allowing the idea to take form in the physical environment and become a built place ready for activity.',
+        urTitle: '03 — Management and Operation',
+        urDesc: 'Operating the place and implementing the working methods developed in earlier stages. Building teams, connecting operators and partners, and managing the day-to-day activity of the place, while continuously learning and adapting through real use. In this way the place continues to function, evolve, and generate movement and economic activity over time.',
+        spTitle: '04 — How and with whom we work',
+        spDesc: 'Every place has its own needs and pace. We work with developers, real estate companies, municipalities, institutions, and organizations — anyone looking to create value from a physical place. Projects may involve independent buildings, public buildings, heritage structures, campuses, community centers, cultural institutions, or complex mixed-use environments. The uses we develop often combine work and commerce, housing, and public activity — sometimes within broader mixed-use frameworks. Our level of involvement varies by project: targeted consulting, ongoing advisory work, development of a defined project, or full management and operation through agreements or partnerships. Each place requires its own model, and that model is developed together. In every case, the work is approached with an entrepreneurial mindset.',
         navAbout: 'About',
         navProjects: 'Projects',
         navContact: 'Contact',
@@ -718,13 +749,18 @@
 
       // Copy: Hebrew (only HE shown when HE selected)
       const copyHe = {
-        tagline: 'מעצבים את העיר.',
-        heroSub: 'מרחבים ציבוריים · ניהול פרויקטים',
-        heroDesc: 'פרויקטים של מרחב ציבורי שמעצבים את חוויית העיר.',
+        tagline: 'YOKA',
+        heroSub: 'הקמה והפעלה של מקומות שמעצבים את המרחב שבו אנשים חיים',
+        heroDesc: 'הכל מתחיל ממקום',
         scroll: 'גלילה',
-        aboutHeading: 'אנחנו מעצבים את המרחבים שבהם חיים.',
-        aboutBody1: 'המרחב הציבורי אינו רקע — הוא העיר עצמה. יוקה פרויקטים מנהלת את מחזור החיים המלא של יוזמות מרחב ציבורי עירוני: מפגישת בעלי העניין הראשונה ועד האבן האחרונה שמונחת. כיכרות, גנים, טיילות, רחובות וחידוש חזיתות מים שהופכים לחלק מהאופן שבו עיר זוכרת את עצמה.',
-        aboutBody2: 'אנחנו עובדים בצומת שבין החזון העירוני, צוותי עיצוב, קבלנים וקהילה. תפקידנו להחזיק את הפרויקט כולו — לשמור על לוחות זמנים אמיתיים, תקציבים מציאותיים ושאיפות שלמות. אנחנו לא רק מנהלים פרויקטים. אנחנו מגנים עליהם.',
+        aboutHeading: 'העולם משתנה מהר. אבל אנשים לא.',
+        aboutBody1: 'אנשים תמיד ירצו לצאת מהבית, לראות, להיפגש, לחוות, להיות חלק ממשהו. כך היה לפנינו, וכך יהיה גם אחרינו.',
+        aboutBody2: 'ככל שהעולם נהיה דיגיטלי יותר, המקום הפיזי נעשה משמעותי יותר. לכן תמיד נצטרך מקומות לאנשים. אנחנו מקימים אותם.',
+        approachHeading: 'גישה',
+        approachFormula: 'פרוגרמה יוצרת ערך ← ערך יוצר תנועה ← תנועה יוצרת רווח',
+        whoHeading: 'מי ומה אנחנו עושים',
+        whoBody1: 'אנחנו צוות של אנשים מעולמות שונים – יזמות, ניהול, אדריכלות, עיצוב, תוכן, פיננסים וטכנולוגיה. יחד אנחנו משלימים את הפאזל שמוריד את החזון לקרקע והופך רעיון למציאות.',
+        whoBody2: 'העבודה שלנו מתמקדת בפיתוח מקומות לשהייה ולעשייה. מקומות שבהם אנשים מגיעים להיות, לעבוד, ליצור, להתאמן, ללמוד, להיפגש ולבלות. אנחנו עוסקים במרחבי עבודה ויצירה, פעילות ספורט, תרבות, קהילה, מסחר ושירותים – ובחיבורים ביניהם. אנחנו בונים את הפלטפורמה – המקום, המבנה והמערכת שמאפשרת לפעילות להתקיים. אנחנו יוצקים את התוכן והפעילות, והאנשים שמגיעים הם אלה שמעצבים את המקום והופכים אותו לחי.',
         specialty: 'התמחות',
         publicSpaces: 'ניהול מרחב ציבורי',
         scale: 'היקף',
@@ -733,14 +769,14 @@
         israel: 'ישראל',
         est: 'נוסד',
         estYear: '2015',
-        pmTitle: '01 — ניהול פרויקטים',
-        pmDesc: 'פיקוח מקצה לקצה מהיתכנות ועד מסירה. שליטה בתקציב, תזמון, תיאום קבלנים וניהול סיכונים — כדי שלא יפול דבר בין הכיסאות.',
-        srTitle: '02 — קשרי בעלי עניין',
-        srDesc: 'ניווט ברשת המורכבת של רשויות מקומיות, גופים ממשלתיים, קהילות, אדריכלים ויזמים. אנחנו שומרים על כולם מיושרים — ומתקדמים.',
-        urTitle: '03 — התחדשות עירונית',
-        urDesc: 'נפיחת חיים חדשים ברקמה עירונית מוזנחת. אנחנו מנהלים את הטרנספורמציה של מרחבים לא מנוצלים ונשכחים למקומות שהעיר גאה בהם.',
-        spTitle: '04 — תכנון אסטרטגי',
-        spDesc: 'סיוע לרשויות ויזמים לחשוב לטווח ארוך על המרחב הציבורי שלהם. תוכניות אב, מחקרי היתכנות ומפות דרכים לפיתוח שעומדות במבחן הזמן.',
+        pmTitle: '01 — קונספט ופרוגרמה',
+        pmDesc: 'הבנה עמוקה של המקום — ההיסטוריה, המבנים, הסביבה והצרכים — וגיבוש הרעיון המרכזי שלו. תרגום הרעיון לפרוגרמת שימושים, חלוקת שטחים ועוגני פעילות שמייצרים תנועה, פעילות וכלכלה. העבודה משלבת חשיבה תכנונית, מרחבית, עיצובית ועסקית עד שמתגבשים הרעיון המרכזי והשימושים שיאפיינו את המקום.',
+        srTitle: '02 — פיתוח והקמה',
+        srDesc: 'תרגום הקונספט והפרוגרמה לתכנון מפורט ולהקמה בפועל. תיאום עבודות התכנון והביצוע, בניית תקציבים ותוכניות כלכליות, גיבוש התכנים והפעילות ועבודה מול ספקים וגורמים מקצועיים. לאורך הדרך נשמר הקו המנחה של הפרויקט, כך שהרעיון מתממש במרחב הפיזי והופך למקום בנוי ומוכן לפעילות.',
+        urTitle: '03 — ניהול והפעלה',
+        urDesc: 'הפעלת המקום והטמעת שיטות העבודה שנקבעו בשלבי הפיתוח. הקמת צוותים, חיבור למפעילים ושותפים וניהול הפעילות היומיומית של המקום, לצד למידה והתאמה מתוך הפעילות בפועל. כך המקום ממשיך לפעול, להתפתח ולייצר תנועה וכלכלה לאורך זמן.',
+        spTitle: '04 — איך ועם מי אנחנו עובדים',
+        spDesc: 'לכל מקום יש את הצרכים והקצב שלו. אנחנו עובדים עם יזמים, חברות נדל״ן, רשויות מקומיות, מוסדות וארגונים — כל גוף שרוצה לייצר ערך ממקום פיזי. העבודה יכולה להתבצע על בניינים עצמאיים, מבני ציבור, מבנים לשימור, קמפוסים, מרכזים קהילתיים, מוסדות תרבות ומתחמים מורכבים. אנחנו מפתחים שימושים שמשלבים בצורה טבעית בין תעסוקה ומסחר, מגורים ופעילות ציבורית, ולעיתים גם במסגרת של עירוב שימושים רחב יותר. המעורבות שלנו משתנה לפי הפרויקט: ייעוץ נקודתי, ליווי מתמשך, עבודה על פרויקט מוגדר, או ניהול והפעלה במסגרת הסכם או שותפות. לכל מקום יש את המודל שמתאים לו, ואותו מפתחים יחד. בכל המקרים העבודה נעשית בגישה יזמית.',
         navAbout: 'אודות',
         navProjects: 'פרויקטים',
         navContact: 'צור קשר',
